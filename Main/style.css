@@ -1,0 +1,138 @@
+/* Стилизація проєкта -
+index.html - всі блоки з user - по 2 в рядок. кнопки/посилання розташувати під інформацією про user.*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+body {
+    display: flex;
+    background-color: rgb(143, 153, 159);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+    width: 1725px;
+    animation: container 2s ease-in-out;
+    border-radius: 5px;
+}
+
+.block_1 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.block_2 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.user-block {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    font-size: 25px;
+}
+
+button {
+    width: 250px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5%;
+    background-color: azure;
+    font-size: 15px;
+}
+
+.media {
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    right: -500px;
+    bottom: -105px;
+}
+
+.animation-block {
+    display: flex;
+    height: 30px;
+    margin-top: 500px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.animation {
+    opacity: 0;
+    background-color: blue;
+    border-radius: 50%;
+    height: 4px;
+    width: 30px;
+    margin: 1%;
+    animation: box 0.5s infinite;
+    animation-delay: 0.8s;
+    position: absolute;
+    top: -300px;
+    right: -5px;
+}
+
+button:hover {
+    background-color: silver;
+}
+
+@keyframes container {
+    0%{
+        opacity: 0;
+        scale: 1.1;
+        transform: translateY(100px);
+    }
+    50%{
+        opacity: 0.5;
+        scale: 1.1;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes box {
+    0% {
+        transform: translateX(200px);
+    }
+    5% {
+        background-color: white;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        scale: 3;
+        transform: translateX(-300px);
+        background-color: blue;
+        height: 50px;
+        width: 100px;
+    }
+    100% {
+        scale: 3;
+        transform: translateX(-300px);
+        height: 100px;
+        width: 150px;
+        background-color: white;
+        opacity: 0;
+    }
+}

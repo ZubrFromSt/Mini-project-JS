@@ -1,0 +1,97 @@
+/* Стилизація проєкта -
+user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.
+блоки з короткою іфною про post - в ряд по 5 .
+post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.
+Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (дати фон. марджини і тд) */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+body {
+    display: flex;
+    background-color: rgb(143, 153, 159);
+    justify-content: space-around;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.info_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 1%;
+}
+
+button {
+    background-color: rgb(211, 219, 230);
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: rgb(190, 191, 191);
+}
+
+li {
+    list-style: none;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+
+.posts__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    animation: container 2s ease-in-out;
+    margin: 0 auto;
+}
+.posts__list > li {
+    margin: 0.3%;
+    flex: 1 1 19%;
+    max-width: 16%;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+@keyframes container {
+    0%{
+        opacity: 0;
+        scale: 1.1;
+        transform: translateY(100px);
+    }
+    60%{
+        opacity: 0.5;
+        scale: 1.1;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
